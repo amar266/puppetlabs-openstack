@@ -145,3 +145,4 @@ openstack::tempest::swift_available     : false
 ######## Log levels
 openstack::verbose: 'True'
 openstack::debug: 'True'
+openstack::ml2::ovs::odl_url: 'http://192.168.122.14:8080/controller/nb/v2/neutron'
