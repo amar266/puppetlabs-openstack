@@ -141,7 +141,7 @@ openstack::neutron::password: 'whi-rtuz'
 openstack::neutron::shared_secret: 'by-sa-bo'
 openstack::neutron::core_plugin: 'ml2'
 openstack::neutron::service_plugins: ['router', 'firewall', 'lbaas', 'vpnaas', 'metering']
-
+openstack::ml2::ovs::odl_url: 'http://192.168.122.14:8080/controller/nb/v2/neutron'
 ######## Ceilometer
 openstack::ceilometer::address::management: '172.16.33.4'
 openstack::ceilometer::mongo::username: 'mongo'
