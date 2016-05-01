@@ -5,11 +5,17 @@ class openstack::common::ml2::ovs {
   $data_address        = ip_for_network($data_network)
   $enable_tunneling    = $::openstack::config::neutron_tunneling # true
   $tunnel_types        = $::openstack::config::neutron_tunnel_types #['gre']
+  $odl_url             = $::openstack::config::odl_url
 
   class { '::neutron::agents::ml2::ovs':
     enable_tunneling => $enable_tunneling,
     local_ip         => $data_address,
     enabled          => true,
     tunnel_types     => $tunnel_types,
+  }
+  class { '::neutron::plugins::ml2::opendaylight':
+    odl_username      => 'admin',
+    odl_password      => 'admin',
+    odl_url           => $odl_url,
   }
 }
