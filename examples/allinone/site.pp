@@ -1,7 +1,7 @@
-node 'puppet' {
-  include ::ntp
-}
+#node 'puppet' {
+#  include ::ntp
+#}
 
-node 'allinone.localdomain' {
-  include ::openstack::role::allinone
-}
+#node 'allinone.localdomain' {
+include ::openstack::role::allinone
+#}
